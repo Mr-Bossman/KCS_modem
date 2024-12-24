@@ -1,0 +1,13 @@
+# KICAD
+**.zip
+**/**-backups/
+**\#auto_saved_files\#
+**_autosave*
+**.kicad_prl
+**.pro
+**-bak
+**.bak
+**.lck
+**fp-info-cache
+**/gerber/*
+!**/gerber/.hidden
