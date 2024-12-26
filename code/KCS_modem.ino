@@ -39,6 +39,13 @@ void setup() {
         for(uint8_t i = 0; i < 5; i++)
           for(uint8_t j = 0; j < 255; j++)
             do_cycle(DIAL_TONE);
+        /* 1200 Baud has too many errors
+        for(uint8_t i = 0; i < 20; i++)
+          for(uint8_t j = 0; j < 255; j++)
+            do_cycle(ANS_MK_2225);
+        for(uint8_t i = 0; i < 20; i++)
+          _delay_loop_2(65535);
+        */
         while(PINC & (1 << 4))
           do_cycle(ANS_MK_2225);
       } else if (!(PINC & (1 << 5))) {

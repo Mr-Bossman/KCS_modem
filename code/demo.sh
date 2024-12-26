@@ -12,3 +12,10 @@ stty -F /dev/ttyUSB0 crtscts 115200
 cat /dev/ttyUSB0 | tee lipsum_cmp.txt
 truncate -s $(stat -c %s lipsum.txt) lipsum_cmp.txt
 diff --color lipsum.txt lipsum_cmp.txt
+
+./send.sh /dev/ttyUSB0 lipsum.txt
+
+
+./receive.sh /dev/ttyUSB0 lipsum_cmp.txt
+truncate -s $(stat -c %s lipsum.txt) lipsum_cmp.txt
+diff --color lipsum.txt lipsum_cmp.txt
